@@ -8,82 +8,77 @@
     android:background="#FFFFFF"
     android:backgroundTint="#FAFAFA">
 
-    <TextView
-        android:id="@+id/textViewMetodoPago2"
-        android:layout_width="wrap_content"
+
+    <Button
+        android:id="@+id/buttonConfirmarMesaFecha"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:backgroundTint="#7E0000"
-        android:fontFamily="@font/lato_bold"
-        android:text="Calendario de reservas"
-        android:textColor="#7E0000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/calendarView"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="100dp"
+        android:autoText="false"
+        android:backgroundTint="#B23A2C"
+        android:fontFamily="@font/lato"
+        android:text="Confirmar"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pastaGrill8"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewMensajeResPlat" />
 
     <TextView
         android:id="@+id/pastaGrill8"
         android:layout_width="250dp"
         android:layout_height="18dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:fontFamily="@font/lato"
-        android:text="¡Te esperamos pronto!"
+        android:text="¡Escoge una fecha de reserva!"
         android:textAlignment="center"
         android:textColor="#6C6C6C "
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hola3"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreCliente" />
 
     <TextView
-        android:id="@+id/hola3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="176dp"
-        android:fontFamily="@font/lato_bold"
-        android:text="Hola,"
-        android:textColor="#7E0000"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toStartOf="@+id/textViewUsuarioCarta"
-        app:layout_constraintHorizontal_bias="0.777"
+        android:id="@+id/tvSede"
+        android:layout_width="250dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/lato"
+        android:textAlignment="center"
+        android:textColor="#6C6C6C "
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/pastaGrill8"
+        tools:text="Nombre de la sede" />
 
     <TextView
-        android:id="@+id/hola4"
+        android:id="@+id/nombreCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="100dp"
         android:fontFamily="@font/lato_bold"
         android:text="Usuario"
-        android:textColor="#000000"
+        android:textColor="#B23A2C"
         android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView2"
-        android:layout_width="411dp"
-        android:layout_height="0dp"
-        app:backgroundTint="#7E0000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/laBistecca4"
@@ -117,12 +112,15 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <CalendarView
-        android:id="@+id/calendarView"
+        android:id="@+id/calendarView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="388dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pastaGrill8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,19 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:backgroundTint="#FAFAFA"
-    tools:context=".MainActivity">
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView2"
-        android:layout_width="411dp"
-        android:layout_height="72dp"
-        app:backgroundTint="#7E0000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+    tools:context=".ui.MainActivity">
 
     <TextView
         android:id="@+id/textViewTotal1"
@@ -30,17 +18,16 @@
         android:textColor="#7E0000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintEnd_toStartOf="@+id/textViewCalculoTotal"
+        app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.71" />
+        app:layout_constraintVertical_bias="0.767" />
 
     <TextView
         android:id="@+id/laBistecca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/lato_bold"
@@ -49,8 +36,6 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -74,6 +59,7 @@
         android:id="@+id/button"
         android:layout_width="230dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="4dp"
         android:backgroundTint="#F1F7CF"
         android:fontFamily="@font/lato_bold"
         android:text="Agregar otro platillo"
@@ -84,26 +70,26 @@
         app:cornerRadius="21.5dp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.867" />
+        app:layout_constraintTop_toBottomOf="@+id/parent"
+        app:layout_constraintVertical_bias="0.878" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="230dp"
         android:layout_height="50dp"
+        android:layout_marginTop="80dp"
         android:backgroundTint="#E8EB70"
         android:fontFamily="@font/lato_bold"
-        android:text="Elegir método de pago"
+        android:text="Guardar Reserva"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="14sp"
         app:cornerRadius="21.5dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTotal1" />
 
@@ -111,244 +97,41 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:backgroundTint="#7E0000"
         android:fontFamily="@font/lato_bold"
         android:text="Carta por reservar"
         android:textColor="#7E0000"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView1"
+        app:layout_constraintBottom_toTopOf="@+id/cardViewSede2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
+        app:layout_constraintVertical_bias="0.654" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="331dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:translationY="260dp"
-        app:cardCornerRadius="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listDetReserva"
+        android:layout_width="337dp"
+        android:layout_height="201dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218">
-
-        <LinearLayout
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_margin="15dp"
-            android:orientation="horizontal"
-            android:padding="2dp">
-
-            <ImageView
-                android:id="@+id/imageViewPlatillo3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/hamburguesa" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textViewNombrePlatillo3"
-            android:layout_width="156dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
-            android:text="Hamburguesa clásica"
-            android:textColor="#6C6C6C "
-            android:translationX="110dp"
-            android:translationY="15dp" />
-
-        <TextView
-            android:id="@+id/textViewNombreCategoria3"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato"
-            android:text="Fast food"
-            android:textColor="#6C6C6C "
-            android:translationX="110dp"
-            android:translationY="40dp" />
-
-        <TextView
-            android:id="@+id/textViewPrecio3"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
-            android:text="$8.00"
-            android:textColor="#B23A2C"
-            android:translationX="110dp"
-            android:translationY="65dp" />
-
-        <TextView
-            android:id="@+id/textViewCantidad3"
-            android:layout_width="35dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
-            android:text="1"
-            android:textAlignment="center"
-            android:textColor="#6C6C6C "
-            android:translationX="258dp"
-            android:translationY="40dp" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="331dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:translationY="130dp"
-        app:cardCornerRadius="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218">
-
-        <LinearLayout
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_margin="15dp"
-            android:orientation="horizontal"
-            android:padding="2dp">
-
-            <ImageView
-                android:id="@+id/imageViewPlatillo2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/hamburguesa" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textViewNombrePlatillo2"
-            android:layout_width="156dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
-            android:text="Hamburguesa clásica"
-            android:textColor="#6C6C6C "
-            android:translationX="110dp"
-            android:translationY="15dp" />
-
-        <TextView
-            android:id="@+id/textViewNombreCategoria2"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato"
-            android:text="Fast food"
-            android:textColor="#6C6C6C "
-            android:translationX="110dp"
-            android:translationY="40dp" />
-
-        <TextView
-            android:id="@+id/textViewPrecio2"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
-            android:text="$8.00"
-            android:textColor="#B23A2C"
-            android:translationX="110dp"
-            android:translationY="65dp" />
-
-        <TextView
-            android:id="@+id/textViewCantidad2"
-            android:layout_width="35dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
-            android:text="1"
-            android:textAlignment="center"
-            android:textColor="#6C6C6C "
-            android:translationX="258dp"
-            android:translationY="40dp" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView1"
-        android:layout_width="331dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        app:cardCornerRadius="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218">
-
-        <LinearLayout
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_margin="15dp"
-            android:orientation="horizontal"
-            android:padding="2dp">
-
-            <ImageView
-                android:id="@+id/imageViewPlatillo1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/hamburguesa" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textViewNombrePlatillo1"
-            android:layout_width="156dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
-            android:text="Hamburguesa clásica"
-            android:textColor="#6C6C6C "
-            android:translationX="110dp"
-            android:translationY="15dp" />
-
-        <TextView
-            android:id="@+id/textViewNombreCategoria1"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato"
-            android:text="Fast food"
-            android:textColor="#6C6C6C "
-            android:translationX="110dp"
-            android:translationY="40dp" />
-
-        <TextView
-            android:id="@+id/textViewPrecio1"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
-            android:text="$8.00"
-            android:textColor="#B23A2C"
-            android:translationX="110dp"
-            android:translationY="65dp" />
-
-        <TextView
-            android:id="@+id/textViewCantidad1"
-            android:layout_width="35dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
-            android:text="1"
-            android:textAlignment="center"
-            android:textColor="#6C6C6C "
-            android:translationX="258dp"
-            android:translationY="40dp" />
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textViewCalculoTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/lato"
         android:text="S/ X.00"
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewTotal1"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        tools:layout_editor_absoluteX="263dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
