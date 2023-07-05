@@ -2,235 +2,80 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:backgroundTint="#FAFAFA">
-
-    <Button
-        android:id="@+id/buttonResMesaHora"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="90dp"
-        android:layout_marginBottom="120dp"
-        android:autoText="false"
-        android:backgroundTint="#B23A2C"
-        android:fontFamily="@font/lato"
-        android:text="Reservar"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMensajeResPlat" />
-
-    <Button
-        android:id="@+id/buttonHora2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="92dp"
-        android:backgroundTint="#B23A2C"
-        android:text="5:00 pm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMetodoPago3" />
-
-    <Button
-        android:id="@+id/buttonHora4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="92dp"
-        android:backgroundTint="#B23A2C"
-        android:text="7:00 pm"
-        app:layout_constraintBottom_toTopOf="@+id/buttonHora6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonHora2" />
-
-    <Button
-        android:id="@+id/buttonHora5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="168dp"
-        android:backgroundTint="#B23A2C"
-        android:text="8:00 pm"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMetodoPago3" />
-
-    <Button
-        android:id="@+id/buttonHora6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="92dp"
-        android:backgroundTint="#B23A2C"
-        android:text="9:00 pm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMetodoPago3" />
-
-    <TextView
-        android:id="@+id/textViewMetodoPago4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="260dp"
-        android:backgroundTint="#7E0000"
-        android:fontFamily="@font/lato_bold"
-        android:text="Cantidad de personas"
-        android:textColor="#7E0000"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMetodoPago3" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMetodoPago4"
-        app:srcCompat="@drawable/ic_baseline_remove_circle_24" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="42dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="5dp"
-        android:fontFamily="@font/lato_bold"
-        android:text="1"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMetodoPago4" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="140dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMetodoPago4"
-        app:srcCompat="@drawable/ic_baseline_add_circle_24_ama" />
-
-    <TextView
-        android:id="@+id/textViewMetodoPago3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="36dp"
-        android:backgroundTint="#7E0000"
-        android:fontFamily="@font/lato_bold"
-        android:text="Horarios disponibles"
-        android:textColor="#7E0000"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextViewMenMesahora" />
-
-    <Button
-        android:id="@+id/buttonHora1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#B23A2C"
-        android:text="4:00 pm"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMetodoPago3" />
-
-    <Button
-        android:id="@+id/buttonHora3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:backgroundTint="#B23A2C"
-        android:text="6:00 pm"
-        app:layout_constraintBottom_toTopOf="@+id/buttonHora5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonHora1" />
-
-    <TextView
-        android:id="@+id/TextViewMenMesahora"
-        android:layout_width="250dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="40dp"
-        android:fontFamily="@font/lato"
-        android:text="¡Completemos tu reserva de mesa!"
-        android:textAlignment="center"
-        android:textColor="#6C6C6C "
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hola6" />
-
-    <TextView
-        android:id="@+id/hola6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="100dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FAFAFA"
-        android:fontFamily="@font/lato_bold"
-        android:text="Usuario"
-        android:textColor="#000000"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    android:backgroundTint="#FAFAFA"
+    tools:context=".Resultado2QRActivity">
 
     <TextView
         android:id="@+id/laBistecca5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
         android:background="#FFFFFF"
         android:backgroundTint="#FAFAFA"
-        android:fontFamily="@font/lato_bold"
-        android:text="LA BISTECCA"
+        android:text="SAN JOU LAO"
         android:textColor="#7E0000"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UnknownId,UnknownIdInLayout" />
 
     <TextView
-        android:id="@+id/pastaGrill10"
-        android:layout_width="69dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="261dp"
+        android:id="@+id/Respuesta"
+        android:layout_width="144dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="132dp"
         android:background="#FFFFFF"
         android:backgroundTint="#FAFAFA"
-        android:fontFamily="@font/lato"
-        android:text="Pasta-Grill"
-        android:textColor="#6C6C6C "
-        android:textSize="14sp"
+        android:text="Reserva no existe"
+        android:textColor="#131111"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UnknownId,UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="95dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="108dp"
+        android:autoText="false"
+        android:backgroundTint="#B23A2C"
+        android:text="Volver"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/laBistecca5"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewMensajeResPlat"
+        tools:ignore="UnknownId,UnknownIdInLayout" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="80dp"
+        android:layout_height="83dp"
+        app:srcCompat="@drawable/equis"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="251dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
