@@ -69,7 +69,7 @@
         android:layout_width="250dp"
         android:layout_height="18dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:fontFamily="@font/lato"
         android:text="Nosotros empresa"
@@ -110,9 +110,10 @@
         android:background="#FFFFFF"
         android:backgroundTint="#FAFAFA"
         android:fontFamily="@font/lato_bold"
-        android:text="LA BISTECCA"
+        android:text="SAN JOY LAO"
         android:textColor="#7E0000"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -120,21 +121,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/pastaGrill5"
-        android:layout_width="69dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="261dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FAFAFA"
-        android:fontFamily="@font/lato"
-        android:text="Pasta-Grill"
-        android:textColor="#6C6C6C "
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/laBistecca8"
-        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,6 @@ class Prefs(val context: Context) {
     val SHARED_NOMBRE = "nombre"
 
 
-
     val storage = context.getSharedPreferences(SHARED_NAME,0)
 
     fun saveId(id : Int){

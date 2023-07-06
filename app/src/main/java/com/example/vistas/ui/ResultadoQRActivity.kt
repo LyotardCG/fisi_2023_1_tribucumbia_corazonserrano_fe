@@ -13,7 +13,7 @@ class ResultadoQRActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fr_reserva_mesa_fecha)
+        setContentView(R.layout.fr_reserva_encontrada)
         txtResultado = findViewById(R.id.txtResultado)
         val btnVolver1: Button = findViewById(R.id.btnVolver)
         getAndShowName()

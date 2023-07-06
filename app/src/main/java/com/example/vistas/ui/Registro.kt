@@ -41,7 +41,8 @@ class Registro : AppCompatActivity() {
         val dni_text = findViewById<EditText>(R.id.edtUserApeUser).text.toString()
         val telefono_text = findViewById<EditText>(R.id.edtUserTelUser).text.toString()
         val correo_text = findViewById<EditText>(R.id.edtUserCorreoUser).text.toString()
-        val usuario_text = findViewById<EditText>(R.id.edtUserCorreoUser2).text.toString()
+        val usuario_text = findViewById<EditText>(R.id.edtUserCorreoUser).text.toString()
+        // esto agregue 2023-1: val usuario_text = findViewById<EditText>(R.id.edtUserCorreoUser2).text.toString()
         val pass_text = findViewById<EditText>(R.id.editPassContUser).text.toString()
 
         val user_registro = UserModel(usuario_text,pass_text,nombres_text,telefono_text,dni_text,correo_text)
