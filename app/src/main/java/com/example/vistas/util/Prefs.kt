@@ -10,6 +10,7 @@ class Prefs(val context: Context) {
     val SHARED_USUARIO = "usuario"
     val SHARED_TOKEN = "token"
     val SHARED_NOMBRE = "nombre"
+    val SHARED_ROL = "rol"
 
 
     val storage = context.getSharedPreferences(SHARED_NAME,0)
@@ -28,6 +29,10 @@ class Prefs(val context: Context) {
 
     fun saveToken(token : String){
         storage.edit().putString(SHARED_TOKEN,token).apply()
+    }
+
+    fun saveRol(rol : String){
+        storage.edit().putString(SHARED_ROL,rol).apply()
     }
 
 
@@ -49,6 +54,10 @@ class Prefs(val context: Context) {
 
     fun getUser():String{
         return storage.getString(SHARED_USUARIO,"")!!
+    }
+
+    fun getRol():String{
+        return storage.getString(SHARED_ROL,"")!!
     }
 
 

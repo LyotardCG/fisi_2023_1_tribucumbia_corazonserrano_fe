@@ -67,7 +67,7 @@ import android.widget.Toast
 import com.example.vistas.R
 
 //Importar apis
-//import com.example.vistas.io.ApiService
+import com.example.vistas.io.ApiService
 import com.example.vistas.io.UsuariosApiService
 import com.example.vistas.io.CartasApiService
 import com.example.vistas.io.ReservacionesApiService
@@ -117,12 +117,18 @@ class MainActivity : AppCompatActivity() {
         val user_text = findViewById<EditText>(R.id.edtUser).text.toString()
         val pass_text = findViewById<EditText>(R.id.editPass).text.toString()
 
+
+
         if(user_text.isNotEmpty() && pass_text.isNotEmpty() ){
             val cliente = userDTO(user_text,pass_text)
+
             //val call = apiService.postLogin(cliente)
             val call = apiService.login(cliente)
+
             call.enqueue(object: Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+
+                    Toast.makeText(applicationContext, "Holaaaaa", Toast.LENGTH_SHORT).show()
 
                     if (response.isSuccessful){
 
@@ -133,13 +139,16 @@ class MainActivity : AppCompatActivity() {
                             return
                         }
 
-                        if(loginResponse.datos.id_cliente != null){
+                        if(loginResponse.datos.data.idUsuario != null){
                             Toast.makeText(applicationContext,"sesion iniciada correctamente",Toast.LENGTH_LONG).show()
                             println(loginResponse)
-                            prefs.saveId(loginResponse.datos.id_cliente)
-                            prefs.saveName(loginResponse.datos.nombre)
-                            prefs.saveUser(loginResponse.datos.usuario)
-                            prefs.saveToken(loginResponse.datos.token)
+                            prefs.saveId(loginResponse.datos.data.idUsuario)
+                            prefs.saveRol(loginResponse.datos.data.rol)
+                            //prefs.saveUser(loginResponse.datos.usuario)
+                            prefs.saveToken(loginResponse.datos.tokenSession)
+
+
+
 
                             val intent = Intent(applicationContext, Inicio::class.java)
                             startActivity(intent)

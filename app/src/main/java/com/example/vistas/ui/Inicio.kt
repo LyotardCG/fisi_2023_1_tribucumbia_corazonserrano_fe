@@ -11,7 +11,7 @@ import com.example.vistas.ui.MainActivity.Companion.prefs
 class Inicio : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fr_menu_principal_empleados)
+        setContentView(R.layout.fr_menu_principal_clientes)
         cargarNombre()
 
         val buttonReserva : Button = findViewById(R.id.buttonResMesa)
