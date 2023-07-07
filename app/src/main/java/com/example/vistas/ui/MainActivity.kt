@@ -66,6 +66,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.vistas.R
 
+
 //Importar apis
 import com.example.vistas.io.ApiService
 import com.example.vistas.io.UsuariosApiService
@@ -114,11 +115,11 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun performLogin(){
-        val user_text = findViewById<EditText>(R.id.edtUser).text.toString()
+        val correo_text = findViewById<EditText>(R.id.edtUser).text.toString()
         val pass_text = findViewById<EditText>(R.id.editPass).text.toString()
 
-        if(user_text.isNotEmpty() && pass_text.isNotEmpty() ){
-            val cliente = userDTO(user_text,pass_text)
+        if(correo_text.isNotEmpty() && pass_text.isNotEmpty() ){
+            val cliente = userDTO(correo_text,pass_text)
 
             //val call = apiService.postLogin(cliente)
             val call = apiService.login(cliente)

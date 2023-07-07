@@ -10,6 +10,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.*
 import com.google.gson.annotations.SerializedName
 
+import okhttp3.Interceptor
+import okhttp3.OkHttpClient
+import okhttp3.Response
 
 interface ApiService {
     @POST( value = "clientes/login")
@@ -90,12 +93,28 @@ interface CartasApiService {
     companion object {
         private const val BASE_URL = "http://10.0.2.2:9000/ne-cartas/servicio-al-cliente/v1/"
 
+        private val httpClient = OkHttpClient.Builder()
+            .addInterceptor(HeaderInterceptor())
+            .build()
+
+        private val retrofit: Retrofit = Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .client(httpClient)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
         fun create(): CartasApiService {
-            val retrofit = Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
             return retrofit.create(CartasApiService::class.java)
+        }
+
+        private class HeaderInterceptor : Interceptor {
+            override fun intercept(chain: Interceptor.Chain): Response {
+                val originalRequest = chain.request()
+                val modifiedRequest = originalRequest.newBuilder()
+                    .header("Ocp-Apim-Subscription-Key", "cfb7844ee9544a76b2a316a1b7818422")
+                    .build()
+                return chain.proceed(modifiedRequest)
+            }
         }
     }
 }
@@ -151,15 +170,32 @@ interface ReservacionesApiService {
     companion object {
         private const val BASE_URL = "http://10.0.2.2:9000/ne-reservaciones/servicio-al-cliente/v1/"
 
+        private val httpClient = OkHttpClient.Builder()
+            .addInterceptor(HeaderInterceptor())
+            .build()
+
+        private val retrofit: Retrofit = Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .client(httpClient)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
         fun create(): ReservacionesApiService {
-            val retrofit = Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
             return retrofit.create(ReservacionesApiService::class.java)
+        }
+
+        private class HeaderInterceptor : Interceptor {
+            override fun intercept(chain: Interceptor.Chain): Response {
+                val originalRequest = chain.request()
+                val modifiedRequest = originalRequest.newBuilder()
+                    .header("Ocp-Apim-Subscription-Key", "cfb7844ee9544a76b2a316a1b7818422")
+                    .build()
+                return chain.proceed(modifiedRequest)
+            }
         }
     }
 }
+
 
 data class Reservacion(
     @field:SerializedName("idCliente")
@@ -220,18 +256,34 @@ interface UsuariosApiService {
 
     companion object {
         private const val BASE_URL = "http://10.0.2.2:9000/ne-usuarios/servicio-al-cliente/v1/"
+        //private const val BASE_URL = "https://apim-sanjoylao-prod-001.azure-api.net/api-usuarios/ux-usuarios/sjl/servicio-al-cliente/v1/"
 
-        // Método de fábrica para crear una instancia de la interfaz
+        private val httpClient = OkHttpClient.Builder()
+            .addInterceptor(HeaderInterceptor())
+            .build()
+
+        private val retrofit: Retrofit = Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .client(httpClient)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
         fun create(): UsuariosApiService {
-            val retrofit = Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
             return retrofit.create(UsuariosApiService::class.java)
         }
-    }
 
+        private class HeaderInterceptor : Interceptor {
+            override fun intercept(chain: Interceptor.Chain): Response {
+                val originalRequest = chain.request()
+                val modifiedRequest = originalRequest.newBuilder()
+                    .header("Ocp-Apim-Subscription-Key", "cfb7844ee9544a76b2a316a1b7818422")
+                    .build()
+                return chain.proceed(modifiedRequest)
+            }
+        }
+    }
 }
+
 
 data class Empleado(
     @field:SerializedName("idSede")
