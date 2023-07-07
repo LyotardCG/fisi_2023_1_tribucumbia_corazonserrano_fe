@@ -117,8 +117,6 @@ class MainActivity : AppCompatActivity() {
         val user_text = findViewById<EditText>(R.id.edtUser).text.toString()
         val pass_text = findViewById<EditText>(R.id.editPass).text.toString()
 
-
-
         if(user_text.isNotEmpty() && pass_text.isNotEmpty() ){
             val cliente = userDTO(user_text,pass_text)
 
@@ -127,8 +125,6 @@ class MainActivity : AppCompatActivity() {
 
             call.enqueue(object: Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-
-
 
                     if (response.isSuccessful){
 
