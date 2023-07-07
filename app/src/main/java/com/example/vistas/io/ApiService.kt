@@ -88,7 +88,7 @@ interface CartasApiService {
     fun reservarCarta(@Body reserva: ReservaCarta): Call<Unit>
 
     companion object {
-        private const val BASE_URL = "http://localhost:9000/ne-cartas/servicio-al-cliente/v1/"
+        private const val BASE_URL = "http://10.0.2.2:9000/ne-cartas/servicio-al-cliente/v1/"
 
         fun create(): CartasApiService {
             val retrofit = Retrofit.Builder()
@@ -149,7 +149,7 @@ interface ReservacionesApiService {
     fun getDetalleSede(@Path("id") id: Int): Call<Unit>
 
     companion object {
-        private const val BASE_URL = "http://localhost:9000/ne-reservaciones/servicio-al-cliente/v1/"
+        private const val BASE_URL = "http://10.0.2.2:9000/ne-reservaciones/servicio-al-cliente/v1/"
 
         fun create(): ReservacionesApiService {
             val retrofit = Retrofit.Builder()
