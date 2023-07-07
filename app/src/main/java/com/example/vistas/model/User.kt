@@ -20,7 +20,16 @@ data class Usuario(
     val rol: String
 )
 
-data class ResponseData(
+
+/*data class ResponseData(
     val data: Usuario,
     val tokenSession: String
+)
+
+ */
+
+data class ResponseData(
+    val idUsuario: Int,
+    val password: String,
+    val rol: String
 )

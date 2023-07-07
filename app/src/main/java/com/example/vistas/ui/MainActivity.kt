@@ -135,18 +135,19 @@ class MainActivity : AppCompatActivity() {
                             return
                         }
 
-                        if(loginResponse.datos.data.idUsuario != null){
+                        if(loginResponse.data.idUsuario != null){
                             Toast.makeText(applicationContext,"sesion iniciada correctamente",Toast.LENGTH_LONG).show()
                             println(loginResponse)
-                            prefs.saveId(loginResponse.datos.data.idUsuario)
-                            prefs.saveRol(loginResponse.datos.data.rol)
+                            prefs.saveId(loginResponse.data.idUsuario)
+                            prefs.saveRol(loginResponse.data.rol)
                             //prefs.saveUser(loginResponse.datos.usuario)
-                            prefs.saveToken(loginResponse.datos.tokenSession)
+                            prefs.saveToken(loginResponse.tokenSession)
+
 
                             val intent = Intent(applicationContext, Inicio::class.java)
                             startActivity(intent)
                         }else{
-                            Toast.makeText(applicationContext,loginResponse.mensaje,Toast.LENGTH_SHORT).show()
+                           // Toast.makeText(applicationContext,loginResponse.mensaje,Toast.LENGTH_SHORT).show()
                         }
                     }
                 }

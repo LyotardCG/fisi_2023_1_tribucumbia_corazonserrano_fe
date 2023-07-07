@@ -219,7 +219,7 @@ interface UsuariosApiService {
     fun registrarUsuario(@Body usuario: Usuario): Call<Unit>
 
     companion object {
-        private const val BASE_URL = "http://localhost:9000/ne-usuarios/servicio-al-cliente/v1/"
+        private const val BASE_URL = "http://10.0.2.2:9000/ne-usuarios/servicio-al-cliente/v1/"
 
         // Método de fábrica para crear una instancia de la interfaz
         fun create(): UsuariosApiService {
