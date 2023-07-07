@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity() {
             call.enqueue(object: Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
 
-                    Toast.makeText(applicationContext, "Holaaaaa", Toast.LENGTH_SHORT).show()
+
 
                     if (response.isSuccessful){
 
@@ -147,9 +147,6 @@ class MainActivity : AppCompatActivity() {
                             //prefs.saveUser(loginResponse.datos.usuario)
                             prefs.saveToken(loginResponse.datos.tokenSession)
 
-
-
-
                             val intent = Intent(applicationContext, Inicio::class.java)
                             startActivity(intent)
                         }else{
@@ -160,10 +157,14 @@ class MainActivity : AppCompatActivity() {
 
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
                     //manejo del error
+                    Toast.makeText(applicationContext, "Error", Toast.LENGTH_SHORT).show()
+                    Log.e("TAG", "Error en la llamada al servicio web: ${t.message}")
+                    // Manejo adicional del error si es necesario
                 }
             })
         }else{
             showErrorName()
+
         }
     }
 

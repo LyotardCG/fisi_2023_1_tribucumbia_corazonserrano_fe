@@ -212,7 +212,8 @@ interface UsuariosApiService {
     fun eliminarUsuarioCliente(@Path("clientId") clientId: Int): Call<Unit>
 
     @POST(value="login")
-    fun login(@Body userDTO : userDTO): Call<LoginResponse>
+    fun login(@Body userDTO : userDTO):
+            Call<LoginResponse>
 
     @POST("registrar-usuarios")
     fun registrarUsuario(@Body usuario: Usuario): Call<Unit>
