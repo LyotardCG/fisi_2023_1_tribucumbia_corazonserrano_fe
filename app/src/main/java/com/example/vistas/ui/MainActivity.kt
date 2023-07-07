@@ -152,12 +152,10 @@ class MainActivity : AppCompatActivity() {
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
                     //manejo del error
                 }
-
             })
         }else{
             showErrorName()
         }
-
     }
 
     private fun showErrorName(){
