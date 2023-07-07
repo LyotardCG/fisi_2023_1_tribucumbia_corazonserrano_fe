@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Vistas</string>
+    <string name="app_name">San Joy Lao</string>
     <string name="pasta_grill">Pasta-Grill</string>
-    <string name="la_bistecca">LA BISTECCA</string>
+    <string name="la_bistecca">SAN JOY LAO</string>
     <string name="hola">Hola,</string>
     <string name="usuario">Usuario</string>
     <string name="tu_mesa_ha_sido_correctamente_reservada">Tu mesa ha sido correctamente reservada</string>
