@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">San Joy Lao</string>
+    <string name="pasta_grill">Pasta-Grill</string>
+    <string name="la_bistecca">SAN JOY LAO</string>
+    <string name="hola">Hola,</string>
+    <string name="usuario">Usuario</string>
+    <string name="tu_mesa_ha_sido_correctamente_reservada">Tu mesa ha sido correctamente reservada</string>
+    <string name="puedes_acceder_al_apartado_de_historial_de_reservas_para_visualizar_mayor_detalle">Puedes acceder al apartado de historial de reservas para visualizar mayor detalle</string>
+    <string name="imagenconfirmacion">imagenconfirmacion</string>
+    <string name="te_esperamos_pronto">¡Te esperamos pronto!</string>
+    <string name="tu_carta_ha_sido_reservada_correctamente">Tu carta ha sido reservada correctamente</string>
+    <string name="la_bistecca_vista_carta_reservada">LA BISTECCA</string>
+    <string name="hola_carta_reservada">Hola,</string>
+    <string name="usuario_vista_carta_reservada">Usuario</string>
+    <string name="pasta_grill_vista_carta_reservada">Pasta-Grill</string>
+    <string name="puedes_acceder">Puedes acceder al apartado de historial de reservas para visualizar mayor detalle</string>
+    <string name="imagenconfirmacioncarta">imagenConfirmacionCarta</string>
+    <string name="total">Total:</string>
+
+    <string name="title_activity_menu">Menu</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="la_bistecca_mesa_sede">San Joy Lao</string>
+    <string name="pasta_grill_mesa_sede">Pasta-Grill</string>
+    <string name="holaReservaMesaSede">Hola,</string>
+    <string name="usuarioReservaMesaSede">Usuario</string>
+    <string name="img">20</string>
+    <string name="botonretroceder">botonRetroceder</string>
+    <string name="metodo_de_pago">Método de pago</string>
+    <string name="pagovisa">pagoVisa</string>
+    <string name="pagopaypal">pagoPayPal</string>
+    <string name="pagoamericanexpress">pagoAmericanExpress</string>
+    <string name="pagodinersclub">pagoDinersClub</string>
+    <string name="pagomastercard">pagoMastercard</string>
+    <string name="n_de_tarjeta">N° de tarjeta</string>
+    <string name="fecha_exp">Fecha Exp</string>
+    <string name="cvv">CVV</string>
+
+</resources>

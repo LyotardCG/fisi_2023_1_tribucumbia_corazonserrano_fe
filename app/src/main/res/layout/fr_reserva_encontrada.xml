@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FAFAFA"
+    tools:context=".ResultadoQRActivity">
+
+
+    <TextView
+        android:id="@+id/textViewNomDetReserva"
+        android:layout_width="210dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:translationX="30dp"
+        android:translationY="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintStart_toEndOf="@+id/textViewCodDetReserva"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.045"
+        tools:text="Nombres" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cate_plat"
+        android:layout_width="310dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="84dp"
+        android:translationY="40dp"
+        app:cardBackgroundColor="#e5b464"
+        app:cardCornerRadius="30dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnVolver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRec3">
+
+        <TextView
+            android:id="@+id/cod_reserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text="Fecha y hora"
+            android:textColor="#000000"
+            android:textSize="23sp"
+            android:translationX="30dp"
+            android:translationY="15dp" />
+
+        <TextView
+            android:id="@+id/cod_reserva3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text="Local"
+            android:textColor="#000000"
+            android:textSize="23sp"
+            android:translationX="30dp"
+            android:translationY="85dp" />
+
+        <TextView
+            android:id="@+id/cod_reserva2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text="Sillas"
+            android:textColor="#000000"
+            android:textSize="23sp"
+            android:translationX="180dp"
+            android:translationY="85dp" />
+
+        <TextView
+            android:id="@+id/TextViewDataHoraReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textColor="#353333"
+            android:textSize="15sp"
+            android:translationX="30dp"
+            android:translationY="50dp"
+            tools:text="06 nov 2022 - 08:00 P.M " />
+
+        <TextView
+            android:id="@+id/textViewDataFechaReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textColor="#353333"
+            android:textSize="15sp"
+            android:translationX="30dp"
+            android:translationY="120dp"
+            tools:text="Sede San Isidro" />
+
+        <TextView
+            android:id="@+id/textViewSillas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textColor="#353333"
+            android:textSize="15sp"
+            android:translationX="180dp"
+            android:translationY="120dp"
+            tools:text="8" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textViewCodDetReserva"
+        android:layout_width="84dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:translationX="30dp"
+        android:translationY="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/cate_plat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.851"
+        tools:text="#41045" />
+
+    <TextView
+        android:id="@+id/sanjoylao4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="52dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FAFAFA"
+        android:text="SAN JOU LAO"
+        android:textColor="#e53c2d"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UnknownId" />
+
+    <TextView
+        android:id="@+id/Respuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="128dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FAFAFA"
+        android:text="Reserva Confirmada"
+        android:textColor="#4CAF50"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UnknownId,UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="133dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="44dp"
+        android:autoText="false"
+        android:backgroundTint="#e53c2d"
+        android:text="Volver"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMensajeResPlat"
+        tools:ignore="UnknownId" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/cate_plat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Respuesta"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/check" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

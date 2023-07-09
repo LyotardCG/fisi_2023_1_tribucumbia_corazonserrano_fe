@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="150dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/ivPlatillo"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:translationX="15dp"
+        android:translationY="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/black" />
+
+    <TextView
+        android:id="@+id/tvNombrePlatillo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/ivPlatillo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tallarin saltado" />
+
+    <TextView
+        android:id="@+id/tvCategoriaPlatillo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/lato"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/ivPlatillo"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombrePlatillo"
+        tools:text="Wok" />
+
+    <TextView
+        android:id="@+id/tvDescripcionPlatillo"
+        android:layout_width="190dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/lato"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPrecioPlatillo"
+        app:layout_constraintStart_toEndOf="@+id/ivPlatillo"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategoriaPlatillo"
+        tools:text="Descripcion breve del platillo para no abrumar al comensal" />
+
+    <TextView
+        android:id="@+id/tvPrecioPlatillo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/lato"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPlatillo"
+        tools:text="23.50" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
