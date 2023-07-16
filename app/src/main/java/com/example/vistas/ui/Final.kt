@@ -90,6 +90,8 @@ class Final : AppCompatActivity() {
             lista
         )
 
+        println(listaDeAgregados)
+
         val call = apiService.reservarCarta(listaDeAgregados)
         call.enqueue(object : Callback<MensajeResponse> {
             override fun onResponse(

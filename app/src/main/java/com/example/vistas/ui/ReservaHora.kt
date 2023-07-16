@@ -12,6 +12,7 @@ import com.example.vistas.io.ReservacionesApiService
 import com.example.vistas.io.response.ReservaCreatedResponse
 import com.example.vistas.model.ReservacionModel
 import com.example.vistas.ui.MainActivity.Companion.prefs
+import com.example.vistas.util.Global
 import com.example.vistas.util.Prefs
 import retrofit2.Call
 import retrofit2.Callback
@@ -128,9 +129,13 @@ class ReservaHora : AppCompatActivity() {
                             Toast.LENGTH_LONG).show()
                         val intentCheck = Intent(applicationContext, CheckMesa::class.java)
                         val nombre_sede = intent.getStringExtra("sede")
+                        Global.id_reservacion_actual = responseReservacion.id
+                        println("obtenido del servidor : "+  Global.id_reservacion_actual)
                         intentCheck.putExtra("sede",nombre_sede)
                         intentCheck.putExtra("cantidad",sillas)
                         intentCheck.putExtra("fecha",fecha)
+                        intentCheck.putExtra("id_reservacion",responseReservacion.id)
+
                         startActivity(intentCheck)
                     }
                 }

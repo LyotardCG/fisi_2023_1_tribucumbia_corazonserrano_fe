@@ -36,20 +36,6 @@
             tools:text="#41045" />
 
         <Button
-            android:id="@+id/reserva_platillo"
-            android:layout_width="wrap_content"
-            android:layout_height="37dp"
-            android:backgroundTint="#FFFFFF"
-            android:fontFamily="@font/lato_bold"
-            android:text="Reservar Platillo"
-            android:textAllCaps="false"
-            android:textColor="#0E0C0C"
-            android:textSize="12sp"
-            android:translationX="190dp"
-            android:translationY="20dp"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <Button
             android:id="@+id/detalla_reserva"
             android:layout_width="wrap_content"
             android:layout_height="34dp"

@@ -13,6 +13,7 @@ import com.example.vistas.io.response.PlatillosResponse
 import com.example.vistas.model.OnClickPlatillo
 import com.example.vistas.model.PlatilloAdapter
 import com.example.vistas.ui.MainActivity.Companion.prefs
+import com.example.vistas.util.Global
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -21,6 +22,8 @@ class Menu : AppCompatActivity(),OnClickPlatillo {
 
     private val claseGlabal = this
 
+    private var id_reservacion : Int = 0
+
     private val ApiService : CartasApiService by lazy{
         CartasApiService.create()
     }
@@ -28,6 +31,7 @@ class Menu : AppCompatActivity(),OnClickPlatillo {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fr_reserva_carta)
+        this.id_reservacion = intent.getIntExtra("id_reservacion",0)
         cargarPlatillos()
     }
 
@@ -69,11 +73,13 @@ class Menu : AppCompatActivity(),OnClickPlatillo {
         foto: String,
         precio: Float
     ) {
+
+
         val intentPlatillo = Intent(this,AgregarPlatillo::class.java)
 
-        val reservacion : Int = intent.getIntExtra("id_reservacion",0)
+        println("desde el menu : " +   Global.id_reservacion_actual)
 
-        intentPlatillo.putExtra("id_reservacion",reservacion)
+        intentPlatillo.putExtra("id_reservacion",  Global.id_reservacion_actual)
         intentPlatillo.putExtra("id_platillo",idPlatillo)
         intentPlatillo.putExtra("nombre",nombre)
         intentPlatillo.putExtra("descripcion",descripcion)

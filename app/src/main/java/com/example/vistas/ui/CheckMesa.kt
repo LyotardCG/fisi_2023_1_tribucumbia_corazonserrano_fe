@@ -11,6 +11,7 @@ import com.example.vistas.R
 import com.example.vistas.ui.MainActivity.Companion.prefs
 import com.example.vistas.util.Prefs
 import android.util.Base64
+import com.example.vistas.util.Global
 
 class CheckMesa : AppCompatActivity() {
 
@@ -39,15 +40,19 @@ class CheckMesa : AppCompatActivity() {
         val fecha = findViewById<TextView>(R.id.textView13)
 
 
-        val prueba=findViewById<ImageView>(R.id.imageViewImagenConfirmacion)
+        //val prueba=findViewById<ImageView>(R.id.imageViewImagenConfirmacion)
 
         usuario.text = prefs.getName()
         sede.text = "Sede : ${intent.getStringExtra("sede")}"
         sillas.text = "Sillas : ${intent.getIntExtra("cantidad",0)}"
         fecha.text = "Fecha : ${intent.getStringExtra("fecha")}"
 
-        //Poniendo el QR
+        Global.sede = "Sede : ${intent.getStringExtra("sede")}"
+        Global.sillas = "Sillas : ${intent.getIntExtra("cantidad",0)}"
+        Global.fecha = "Fecha : ${intent.getStringExtra("fecha")}"
 
+        //Poniendo el QR
+/*
         val base64String = prefs.getQR()
         val base64Image = base64String.split(",").toTypedArray()[1]
 
@@ -55,12 +60,12 @@ class CheckMesa : AppCompatActivity() {
         val decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.size)
 
         prueba.setImageBitmap(decodedByte)
-
+*/
 
     }
 
     fun gotoInicio(){
-        val intentInicio = Intent(this,Inicio::class.java)
+        val intentInicio = Intent(this,Menu::class.java)
 
         startActivity(intentInicio)
     }

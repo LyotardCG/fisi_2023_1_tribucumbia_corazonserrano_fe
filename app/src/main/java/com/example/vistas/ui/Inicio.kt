@@ -29,7 +29,15 @@ class Inicio : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fr_menu_principal_clientes)
 
+        val buttonsalir: Button = findViewById(R.id.buttonsalir)
+
+        buttonsalir.setOnClickListener {
+            logout()
+        }
+
         obtenerDetalleUsuario()
+
+
     }
 
     private fun obtenerDetalleUsuario() {
@@ -65,6 +73,10 @@ class Inicio : AppCompatActivity() {
         })
     }
 
+    private fun logout(){
+        startActivity(Intent(applicationContext, MainActivity::class.java))
+    }
+
     private fun cargarNombre(nombre: String) {
         val userName = findViewById<TextView>(R.id.textViewUsuarioCliente)
         userName.text = nombre
@@ -97,6 +109,13 @@ class Inicio : AppCompatActivity() {
             val intent = Intent(applicationContext, ScannerQR::class.java)
             startActivityForResult(intent, REQUEST_CODE_SCANNER)
         }
+        val buttonsalir: Button = findViewById(R.id.buttonsalirempleado)
+
+        buttonsalir.setOnClickListener {
+            logout()
+        }
+
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

@@ -92,7 +92,7 @@
         android:autoText="false"
         android:backgroundTint="#e53c2d"
         android:fontFamily="@font/lato"
-        android:text="Ir a inicio"
+        android:text="Reservar Carta"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
