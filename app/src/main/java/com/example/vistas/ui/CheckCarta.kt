@@ -8,20 +8,10 @@ import android.util.Base64
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.vistas.R
-import com.example.vistas.io.CartasApiService
-import com.example.vistas.io.ReservacionesApiService
-import com.example.vistas.io.response.PlatillosResponse
-import com.example.vistas.model.PlatilloAdapter
 import com.example.vistas.model.PlatilloFinal
 import com.example.vistas.util.Global
 import com.example.vistas.util.Prefs
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class CheckCarta : AppCompatActivity() {
     companion object{
@@ -52,8 +42,8 @@ class CheckCarta : AppCompatActivity() {
     }
 
     fun cargarInfo(){
-        val usuario = findViewById<TextView>(R.id.textViewHolaUCarta)
-        usuario.text = "USUARIO"
+        val usuario = findViewById<TextView>(R.id.textViewHolaUCarta2)
+        usuario.text = "¡Completado!"
 
 
         val sede = findViewById<TextView>(R.id.finalsede)

@@ -92,7 +92,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHolaUCarta" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewHolaUCarta2" />
 
     <TextView
         android:id="@+id/textViewConfirmacion"
@@ -112,14 +112,14 @@
         app:layout_constraintTop_toBottomOf="@+id/imageViewImagenConfirmacionCarta" />
 
     <TextView
-        android:id="@+id/textViewHolaUCarta"
+        android:id="@+id/textViewHolaUCarta2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="104dp"
         android:layout_marginEnd="100dp"
         android:fontFamily="@font/lato_bold"
-        android:text="Usuario"
+        android:text="!Completado!"
         android:textColor="#e53c2d"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"

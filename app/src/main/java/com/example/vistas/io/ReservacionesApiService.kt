@@ -63,8 +63,8 @@ interface ReservacionesApiService {
 
     companion object {
 
-        private const val BASE_URL = "http://10.0.2.2:9002/ne-reservaciones/servicio-al-cliente/v1/"
-        //private const val BASE_URL = "http://api-reservaciones.eb36bc0f9bda49e495fa.eastus.aksapp.io/ne-reservaciones/servicio-al-cliente/v1/"
+        //private const val BASE_URL = "http://10.0.2.2:9002/ne-reservaciones/servicio-al-cliente/v1/"
+        private const val BASE_URL = "http://api-reservaciones.eb36bc0f9bda49e495fa.eastus.aksapp.io/ne-reservaciones/servicio-al-cliente/v1/"
         //private const val BASE_URL = "https://apim-sanjoylao-prod-001.azure-api.net/api-reservaciones/ux-reservaciones/sjl/servicio-al-cliente/v1/"
 
 
@@ -86,7 +86,7 @@ interface ReservacionesApiService {
             override fun intercept(chain: Interceptor.Chain): Response {
                 val originalRequest = chain.request()
                 val modifiedRequest = originalRequest.newBuilder()
-                    .header("Ocp-Apim-Subscription-Key", "cfb7844ee9544a76b2a316a1b7818422")
+                    .header("Ocp-Apim-Subscription-Key", "i51b0f5ebf65e42758bb373d00bbc3a96")
                     .build()
                 return chain.proceed(modifiedRequest)
             }
