@@ -41,7 +41,6 @@ class Prefs(val context: Context) {
     }
 
 
-
     fun getId():Int{
         return storage.getInt(SHARED_ID_USER,0)
     }

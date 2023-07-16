@@ -37,50 +37,21 @@
         app:srcCompat="@drawable/ic_baseline_check_circle_outline_24" />
 
     <TextView
-        android:id="@+id/textView13"
-        android:layout_width="281dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="48dp"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        tools:text="Fecha : 2023-01-01 20:00:00" />
-
-    <TextView
         android:id="@+id/textView7"
         android:layout_width="294dp"
         android:layout_height="44dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="80dp"
         android:fontFamily="@font/lato_bold"
-        android:text="@string/tu_mesa_ha_sido_correctamente_reservada"
+        android:text="El horario seleccionado se encuentra disponible"
         android:textAlignment="center"
         android:textColor="#6C6C6C "
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewImagenConfirmacion" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="281dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="48dp"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:text="Sillas : 8" />
 
     <Button
         android:id="@+id/buttonMesaConfInicio"
@@ -99,25 +70,25 @@
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.236" />
+        app:layout_constraintVertical_bias="0.427" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="48dp"
-        android:text="@string/puedes_acceder_al_apartado_de_historial_de_reservas_para_visualizar_mayor_detalle"
+        android:text="Proceda con la reservación de la carta para finalizar con la reserva"
         android:textAlignment="center"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textViewMenMesConf"
@@ -127,7 +98,7 @@
         android:layout_marginTop="152dp"
         android:layout_marginEnd="40dp"
         android:fontFamily="@font/lato"
-        android:text="¡Te esperamos pronto!"
+        android:text="¡Hola, es un gusto tenerlo aqui!"
         android:textAlignment="center"
         android:textColor="#6C6C6C "
         android:textSize="14sp"
@@ -149,20 +120,5 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="281dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="48dp"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:text="Sede : Salaverry" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.vistas.R
-import com.example.vistas.ui.MainActivity.Companion.prefs
 import com.example.vistas.util.Prefs
 import android.util.Base64
 import com.example.vistas.util.Global
@@ -35,17 +34,17 @@ class CheckMesa : AppCompatActivity() {
 
     fun cargarInfo(){
         val usuario = findViewById<TextView>(R.id.textViewUsuarioMesaConfir)
-        val sede = findViewById<TextView>(R.id.textView5)
-        val sillas = findViewById<TextView>(R.id.textView10)
-        val fecha = findViewById<TextView>(R.id.textView13)
+        //val sede = findViewById<TextView>(R.id.textView5)
+        //val sillas = findViewById<TextView>(R.id.textView10)
+        //val fecha = findViewById<TextView>(R.id.textView13)
 
 
         //val prueba=findViewById<ImageView>(R.id.imageViewImagenConfirmacion)
 
         usuario.text = prefs.getName()
-        sede.text = "Sede : ${intent.getStringExtra("sede")}"
-        sillas.text = "Sillas : ${intent.getIntExtra("cantidad",0)}"
-        fecha.text = "Fecha : ${intent.getStringExtra("fecha")}"
+        //sede.text = "Sede : ${intent.getStringExtra("sede")}"
+        //sillas.text = "Sillas : ${intent.getIntExtra("cantidad",0)}"
+        //fecha.text = "Fecha : ${intent.getStringExtra("fecha")}"
 
         Global.sede = "Sede : ${intent.getStringExtra("sede")}"
         Global.sillas = "Sillas : ${intent.getIntExtra("cantidad",0)}"

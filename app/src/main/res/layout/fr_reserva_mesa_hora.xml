@@ -39,19 +39,9 @@
         android:backgroundTint="#e53c2d"
         android:text="5:00 pm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toEndOf="@+id/buttonHora1"
         app:layout_constraintTop_toBottomOf="@+id/TextViewMenMesahora" />
-
-    <Button
-        android:id="@+id/buttonHora4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:backgroundTint="#e53c2d"
-        android:text="7:00 pm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonHora2" />
 
     <Button
         android:id="@+id/buttonHora5"
@@ -63,7 +53,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonResMesaHora"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonHora3"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <Button
         android:id="@+id/buttonHora6"
@@ -77,20 +67,20 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/buttonHora5"
         app:layout_constraintTop_toBottomOf="@+id/buttonHora4"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.058" />
 
     <TextView
         android:id="@+id/textViewMetodoPago4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="208dp"
         android:backgroundTint="#e53c2d"
         android:fontFamily="@font/lato_bold"
         android:text="Cantidad de personas"
         android:textColor="#7E0000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewMetodoPago3" />
 
@@ -163,12 +153,24 @@
         android:layout_width="94dp"
         android:layout_height="45dp"
         android:layout_marginStart="92dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#e53c2d"
         android:text="6:00 pm"
         app:layout_constraintEnd_toStartOf="@+id/buttonHora4"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonHora1" />
+
+    <Button
+        android:id="@+id/buttonHora4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="88dp"
+        android:backgroundTint="#e53c2d"
+        android:text="7:00 pm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHora2" />
 
     <TextView
         android:id="@+id/TextViewMenMesahora"

@@ -8,4 +8,5 @@ object Global {
     var sede = ""
     var sillas = ""
     var fecha = ""
+    var qr=""
 }

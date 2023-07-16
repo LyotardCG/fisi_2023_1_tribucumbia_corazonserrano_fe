@@ -118,6 +118,7 @@ class ReservaHora : AppCompatActivity() {
 
                     prefs.saveQR(response.body()!!.qr)
 
+
                     val responseReservacion = response.body()
 
                     if( responseReservacion == null){
@@ -125,7 +126,8 @@ class ReservaHora : AppCompatActivity() {
                             Toast.LENGTH_LONG).show()
                         return
                     }else{
-                        Toast.makeText(applicationContext, responseReservacion.mensaje,
+                        //Toast.makeText(applicationContext, responseReservacion.mensaje,Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "Horario confirmado",
                             Toast.LENGTH_LONG).show()
                         val intentCheck = Intent(applicationContext, CheckMesa::class.java)
                         val nombre_sede = intent.getStringExtra("sede")
