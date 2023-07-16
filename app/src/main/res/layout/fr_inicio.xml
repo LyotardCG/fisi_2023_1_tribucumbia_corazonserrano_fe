@@ -4,13 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="#FFFFFF"
-    android:backgroundTint="#FAFAFA"
+    android:background="@drawable/fondo_inicio"
     tools:context=".ui.MainActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="-75dp">
-
 
     <TextView
         android:id="@+id/txtRec"
@@ -18,15 +15,15 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato_bold"
         android:text="SAN JOY LAO"
-        android:textColor="#e53c2d"
+        android:textColor="#FFFFFF"
         android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.173"
-        tools:textStyle="bold" />
+        app:layout_constraintVertical_bias="0.173" />
 
     <EditText
         android:id="@+id/edtUser"
@@ -37,6 +34,7 @@
         android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/lato"
         android:hint="Correo"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -54,6 +52,7 @@
         android:fontFamily="@font/lato"
         android:hint="Contraseña"
         android:inputType="textPassword"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -63,23 +62,23 @@
 
     <Button
         android:id="@+id/btnReg"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="408dp"
-
-        android:backgroundTint="#000000"
+        android:backgroundTint="#e53c2d"
         android:fontFamily="@font/lato_bold"
         android:text="Registrarse"
         android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnIng"
-        app:layout_constraintVertical_bias="0.0"
-        tools:textStyle="bold"  android:layout_width="0dp"/>
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnIng"
@@ -88,14 +87,15 @@
         android:layout_marginStart="70dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="70dp"
-        android:backgroundTint="#e53c2d"
+        android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/lato_bold"
         android:text="Ingresar"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPass"
-        tools:textStyle="bold" />
+        app:layout_constraintTop_toBottomOf="@+id/editPass" />
 
     <TextView
         android:id="@+id/txtHiper"
@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
         android:text="¿Haz olvidado tu contraseña?"
-        android:textColor="#6C6C6C"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btnIng"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,6 +111,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editPass"
         app:layout_constraintVertical_bias="0.195" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,10 +39,9 @@ interface CartasApiService {
 
     companion object {
 
-        //private const val BASE_URL = "http://10.0.2.2:9001/ne-cartas/servicio-al-cliente/v1/"
-         private const val BASE_URL = "http://api-cartas.2db5f954f43042069dae.eastus.aksapp.io/ne-cartas/servicio-al-cliente/v1/"
+        private const val BASE_URL = "http://10.0.2.2:9001/ne-cartas/servicio-al-cliente/v1/"
+        //private const val BASE_URL = "http://api-cartas.2db5f954f43042069dae.eastus.aksapp.io/ne-cartas/servicio-al-cliente/v1/"
         //private const val BASE_URL = "https://apim-sanjoylao-prod-001.azure-api.net/api-cartas/ux-cartas/sjl/servicio-al-cliente/v1/"
-
 
 
         private val httpClient = OkHttpClient.Builder()

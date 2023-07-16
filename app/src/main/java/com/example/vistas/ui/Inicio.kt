@@ -45,7 +45,7 @@ class Inicio : AppCompatActivity() {
                     usuario?.let {
                         val nombre = it.nombres
                         MainActivity.prefs.saveName(nombre) // Guardar el nombre en SharedPreferences
-                        Toast.makeText(applicationContext, "Nombre del usuario: $nombre", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(applicationContext, "Nombre del usuario: $nombre", Toast.LENGTH_SHORT).show()
                         cargarNombre(nombre)
 
                         val rol = MainActivity.prefs.getRol()
