@@ -64,7 +64,7 @@ interface ReservacionesApiService {
     companion object {
 
         private const val BASE_URL = "http://10.0.2.2:9002/ne-reservaciones/servicio-al-cliente/v1/"
-        //private const val BASE_URL = "http://api-reservaciones.2db5f954f43042069dae.eastus.aksapp.io/ne-reservaciones/servicio-al-cliente/v1/"
+        //private const val BASE_URL = "http://api-reservaciones.eb36bc0f9bda49e495fa.eastus.aksapp.io/ne-reservaciones/servicio-al-cliente/v1/"
         //private const val BASE_URL = "https://apim-sanjoylao-prod-001.azure-api.net/api-reservaciones/ux-reservaciones/sjl/servicio-al-cliente/v1/"
 
 

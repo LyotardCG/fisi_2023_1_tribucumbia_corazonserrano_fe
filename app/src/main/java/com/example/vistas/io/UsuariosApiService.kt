@@ -64,7 +64,7 @@ interface UsuariosApiService {
 
 
         private const val BASE_URL = "http://10.0.2.2:9003/ne-usuarios/servicio-al-cliente/v1/"
-        //private const val BASE_URL = "http://api-usuarios.2db5f954f43042069dae.eastus.aksapp.io/ne-usuarios/servicio-al-cliente/v1/"
+        //private const val BASE_URL = "http://api-usuarios.eb36bc0f9bda49e495fa.eastus.aksapp.io/ne-usuarios/servicio-al-cliente/v1/"
         //private const val BASE_URL = "https://apim-sanjoylao-prod-001.azure-api.net/api-usuarios/ux-usuarios/sjl/servicio-al-cliente/v1/"
 
         private val httpClient = OkHttpClient.Builder()
