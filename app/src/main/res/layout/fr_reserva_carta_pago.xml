@@ -13,52 +13,47 @@
         android:layout_width="248dp"
         android:layout_height="42dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="36dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="22dp"
         android:fontFamily="@font/lato"
         android:text="Se debe abonar el 30% del total del precio de los platillos"
         android:textAlignment="center"
         android:textColor="#6C6C6C "
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTotal1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewPaypal" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <TextView
         android:id="@+id/textViewTotal1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="164dp"
         android:backgroundTint="#e53c2d"
         android:fontFamily="@font/lato_bold"
         android:text="Total"
         android:textColor="#e53c2d"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextViewMenCartaPago" />
+        tools:layout_editor_absoluteY="353dp" />
 
-    <Button
-        android:id="@+id/buttonPaypal"
-        android:layout_width="230dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="160dp"
-        android:backgroundTint="#e5b464"
-        android:fontFamily="@font/lato_bold"
-        android:text="Pagar con Paypal"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:cornerRadius="21.5dp"
+    <com.paypal.checkout.paymentbutton.PaymentButtonContainer
+        android:id="@+id/payment_button_container"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="336dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.344"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        tools:textStyle="bold" />
+        app:paypal_button_color="blue"
+        app:paypal_button_enabled="true"
+        app:paypal_button_label="pay"
+        app:paypal_button_shape="rectangle"
+        app:paypal_button_size="large" />
 
     <TextView
         android:id="@+id/laBistecca7"
@@ -91,13 +86,14 @@
         android:layout_width="122dp"
         android:layout_height="138dp"
         android:layout_marginStart="145dp"
-        android:layout_marginTop="168dp"
         android:layout_marginEnd="145dp"
         android:contentDescription="PaypalLogo"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewMenCartaPago"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.852"
         app:srcCompat="@drawable/paypal" />
 
     <TextView
