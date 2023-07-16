@@ -37,8 +37,8 @@
 
         <Button
             android:id="@+id/detalla_reserva"
-            android:layout_width="wrap_content"
-            android:layout_height="34dp"
+            android:layout_width="127dp"
+            android:layout_height="36dp"
             android:backgroundTint="#FFFFFF"
             android:fontFamily="@font/lato_bold"
             android:text="Detallar Reserva"
